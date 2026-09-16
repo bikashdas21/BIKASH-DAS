@@ -1,0 +1,107 @@
+name: Build & Release Zero-Grid Artifacts
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build Installable Android APK & AAB
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up Java Development Kit (JDK 17)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Ensure Gradle Wrapper Executable
+        run: chmod +x gradlew
+
+      - name: Configure Keystore (Optional Production Secrets)
+        env:
+          KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "Decoding production keystore from GitHub secret..."
+            echo "$KEYSTORE_BASE64" | base64 -d > my-upload-key.jks
+          else
+            echo "No production secret keystore provided; Gradle will use auto-generated fallback signing for immediate installation."
+          fi
+
+      - name: Build Release APK
+        env:
+          STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
+        run: |
+          ./gradlew assembleRelease --no-daemon --stacktrace
+
+      - name: Validate & Measure Release APK
+        run: |
+          if [ ! -f "app/build/outputs/apk/release/app-release.apk" ]; then
+            echo "ERROR: app/build/outputs/apk/release/app-release.apk was not generated!"
+            exit 1
+          fi
+          echo "=== REAL RELEASE APK GENERATED ==="
+          ls -lh app/build/outputs/apk/release/app-release.apk
+          APK_BYTES=$(stat -c%s app/build/outputs/apk/release/app-release.apk 2>/dev/null || stat -f%z app/build/outputs/apk/release/app-release.apk)
+          echo "Real APK Size in bytes: $APK_BYTES"
+
+      - name: Upload Release APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zero-Grid-Release-APK
+          path: app/build/outputs/apk/release/app-release.apk
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Build Release AAB Bundle
+        env:
+          STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
+        run: |
+          ./gradlew bundleRelease --no-daemon --stacktrace
+
+      - name: Validate & Measure Release AAB
+        run: |
+          if [ ! -f "app/build/outputs/bundle/release/app-release.aab" ]; then
+            echo "ERROR: app/build/outputs/bundle/release/app-release.aab was not generated!"
+            exit 1
+          fi
+          echo "=== REAL RELEASE AAB GENERATED ==="
+          ls -lh app/build/outputs/bundle/release/app-release.aab
+          AAB_BYTES=$(stat -c%s app/build/outputs/bundle/release/app-release.aab 2>/dev/null || stat -f%z app/build/outputs/bundle/release/app-release.aab)
+          echo "Real AAB Size in bytes: $AAB_BYTES"
+
+      - name: Upload Release AAB Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zero-Grid-Release-AAB
+          path: app/build/outputs/bundle/release/app-release.aab
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Create GitHub Release (On Version Tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            app/build/outputs/apk/release/app-release.apk
+            app/build/outputs/bundle/release/app-release.aab
+          generate_release_notes: true
+          draft: false
+          prerelease: false

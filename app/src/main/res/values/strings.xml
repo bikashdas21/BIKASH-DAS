@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Zero-Grid</string>
+    <string name="project_name">ZERO-GRID FREEDOM NETWORK</string>
+    <string name="tagline">নেটওয়ার্কের বাইরে থেকেও সংযুক্ত থাকুন।</string>
+    <string name="tagline_en">Connect Beyond the Grid.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">হোম</string>
+    <string name="nav_chat">চ্যাট</string>
+    <string name="nav_nearby">কাছাকাছি</string>
+    <string name="nav_network">নেটওয়ার্ক</string>
+    <string name="nav_settings">সেটিংস</string>
+
+    <!-- Status -->
+    <string name="status_network_available">নেটওয়ার্ক সচল</string>
+    <string name="status_offline_mesh">অফলাইন মেশ সচল</string>
+    <string name="status_no_connection">সংযোগ বিচ্ছিন্ন</string>
+    <string name="status_mesh_to_gateway">মেশ → গেটওয়ে → ইন্টারনেট</string>
+    <string name="offline_mesh_badge">অফলাইন মেশ</string>
+
+    <!-- Home Quick Actions -->
+    <string name="action_chat">চ্যাট</string>
+    <string name="action_nearby">কাছাকাছি</string>
+    <string name="action_network">টপোলজি</string>
+    <string name="action_location">লোকেশন</string>
+    <string name="action_sos">জরুরি SOS</string>
+    <string name="action_files">ফাইল শেয়ার</string>
+    <string name="action_community">কমিউনিটি নোড</string>
+
+    <!-- Mesh Details -->
+    <string name="connected_nodes">সংযুক্ত নোড</string>
+    <string name="nearest_node">নিকটবর্তী নোড</string>
+    <string name="connection_type">সংযোগ মাধ্যম</string>
+    <string name="nodes_count_format">%1$d টি নোড</string>
+    <string name="distance_meters_format">%1$d মিটার</string>
+
+    <!-- Nearby Devices -->
+    <string name="nearby_title">কাছাকাছি ডিভাইসসমূহ</string>
+    <string name="btn_scan">স্ক্যান করুন</string>
+    <string name="btn_scanning">স্ক্যান চলছে…</string>
+    <string name="btn_connect">সংযোগ করুন</string>
+    <string name="btn_disconnect">সংযোগ বিচ্ছিন্ন</string>
+    <string name="btn_chat">বার্তা পাঠান</string>
+    <string name="btn_view_profile">প্রোফাইল</string>
+
+    <!-- Chat -->
+    <string name="chat_title">নিরাপদ মেসেজিং</string>
+    <string name="broadcast_channel">পাবলিক মেশ ব্রডকাস্ট</string>
+    <string name="direct_message">ব্যক্তিগত বার্তা</string>
+    <string name="input_placeholder">বার্তা লিখুন (অফলাইনে পাঠানো হবে)…</string>
+    <string name="btn_send">পাঠান</string>
+    <string name="status_sending">পাঠানো হচ্ছে…</string>
+    <string name="status_relaying">রিলে হচ্ছে…</string>
+    <string name="status_delivered">পৌঁছেছে</string>
+    <string name="status_failed">ব্যর্থ</string>
+    <string name="status_offline">অফলাইন সংরক্ষিত</string>
+
+    <!-- Voice Recording -->
+    <string name="voice_record_start">ভয়েস রেকর্ড করুন</string>
+    <string name="voice_recording">রেকর্ডিং চলছে…</string>
+    <string name="voice_preview">শুনুন</string>
+    <string name="voice_send">ভয়েস পাঠান</string>
+    <string name="voice_cancel">বাতিল</string>
+
+    <!-- SOS -->
+    <string name="sos_title">জরুরি বিপদ সংকেত (SOS)</string>
+    <string name="sos_button">জরুরি SOS পাঠান</string>
+    <string name="sos_warning_title">আপনি কি নিশ্চিত?</string>
+    <string name="sos_warning_message">এই বার্তাটি আশেপাশের সকল মেশ নোডে সর্বোচ্চ অগ্রাধিকার সহ সম্প্রচারিত হবে। কোনো মিথ্যা সংকেত পাঠাবেন না।</string>
+    <string name="sos_confirm">হ্যাঁ, SOS পাঠান</string>
+    <string name="sos_cancel">না, বাতিল করুন</string>
+    <string name="sos_alert_prefix">🚨 জরুরি বিপদবার্তা:</string>
+
+    <!-- Location -->
+    <string name="location_title">অফলাইন লোকেশন শেয়ারিং</string>
+    <string name="location_share_once">একবার পাঠান</string>
+    <string name="location_share_15min">১৫ মিনিটের জন্য শেয়ার</string>
+    <string name="location_stop_sharing">শেয়ার বন্ধ করুন</string>
+    <string name="location_permission_needed">অফলাইন জিপিএস লোকেশন পেতে পারমিশন প্রয়োজন।</string>
+
+    <!-- File Transfer -->
+    <string name="file_transfer_title">উচ্চগতির ফাইল ট্রান্সফার</string>
+    <string name="transfer_progress_format">%1$d%% সম্পন্ন (%2$s / %3$s)</string>
+    <string name="transfer_resume">পুনরায় শুরু করুন</string>
+    <string name="transfer_cancel">বাতিল</string>
+
+    <!-- Community Nodes -->
+    <string name="community_nodes_title">সৌরচালিত কমিউনিটি নোডস</string>
+    <string name="community_node_desc">কম খরচে সৌরবিদ্যুৎ চালিত অফলাইন রিপিটার ও লোকাল মেশ গেটওয়ে।</string>
+
+    <!-- Settings -->
+    <string name="settings_title">সেটিংস ও নিরাপত্তা</string>
+    <string name="section_account">ব্যবহারকারী অ্যাকাউন্ট</string>
+    <string name="section_network">মেশ ও নেটওয়ার্ক</string>
+    <string name="section_privacy">গোপনীয়তা</string>
+    <string name="section_security">ক্রিপ্টোগ্রাফিক পরিচয়</string>
+    <string name="section_app">অ্যাপ পছন্দসমূহ</string>
+    <string name="section_data">ডেটা ব্যবস্থাপনা</string>
+
+    <string name="pref_guest_mode">গেস্ট মোড</string>
+    <string name="pref_relay_mode">রিলে মোড (অন্যের বার্তা ফরোয়ার্ড করুন)</string>
+    <string name="pref_battery_saver">ব্যাটারি সেভার (স্মার্ট স্ক্যানিং)</string>
+    <string name="pref_language">ভাষা (Language)</string>
+    <string name="pref_theme">ডার্ক মোড</string>
+    <string name="pref_clear_data">লোকাল ডেটা মুছুন</string>
+    <string name="pref_export_data">মেসেজ হিস্ট্রি এক্সপোর্ট</string>
+    <string name="security_notice">এই অ্যাপে কোনো কেন্দ্রীয় সার্ভার নেই। বার্তাগুলি এন্ড-টু-এন্ড এনক্রিপ্ট হয়ে লোকাল হার্ডওয়্যার কি-স্টোরে সংরক্ষিত থাকে। অফলাইন মেশ কখনোই গ্লোবাল ইন্টারনেট নয়।</string>
+</resources>

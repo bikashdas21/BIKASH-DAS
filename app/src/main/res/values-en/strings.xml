@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Zero-Grid</string>
+    <string name="project_name">ZERO-GRID FREEDOM NETWORK</string>
+    <string name="tagline">Connect Beyond the Grid.</string>
+    <string name="tagline_en">Connect Beyond the Grid.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_nearby">Nearby</string>
+    <string name="nav_network">Network</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Status -->
+    <string name="status_network_available">Network Available</string>
+    <string name="status_offline_mesh">Offline Mesh Active</string>
+    <string name="status_no_connection">No Connection</string>
+    <string name="status_mesh_to_gateway">Mesh → Gateway → Internet</string>
+    <string name="offline_mesh_badge">Offline Mesh</string>
+
+    <!-- Home Quick Actions -->
+    <string name="action_chat">Chat</string>
+    <string name="action_nearby">Nearby</string>
+    <string name="action_network">Topology</string>
+    <string name="action_location">Location</string>
+    <string name="action_sos">Emergency SOS</string>
+    <string name="action_files">File Share</string>
+    <string name="action_community">Community Nodes</string>
+
+    <!-- Mesh Details -->
+    <string name="connected_nodes">Connected Nodes</string>
+    <string name="nearest_node">Nearest Node</string>
+    <string name="connection_type">Connection Type</string>
+    <string name="nodes_count_format">%1$d Nodes</string>
+    <string name="distance_meters_format">%1$d m</string>
+
+    <!-- Nearby Devices -->
+    <string name="nearby_title">Nearby Devices</string>
+    <string name="btn_scan">Scan Devices</string>
+    <string name="btn_scanning">Scanning…</string>
+    <string name="btn_connect">Connect</string>
+    <string name="btn_disconnect">Disconnect</string>
+    <string name="btn_chat">Send Message</string>
+    <string name="btn_view_profile">Profile</string>
+
+    <!-- Chat -->
+    <string name="chat_title">Secure Messaging</string>
+    <string name="broadcast_channel">Public Mesh Broadcast</string>
+    <string name="direct_message">Direct Message</string>
+    <string name="input_placeholder">Type a message (sent offline)…</string>
+    <string name="btn_send">Send</string>
+    <string name="status_sending">Sending…</string>
+    <string name="status_relaying">Relaying…</string>
+    <string name="status_delivered">Delivered</string>
+    <string name="status_failed">Failed</string>
+    <string name="status_offline">Saved Offline</string>
+
+    <!-- Voice Recording -->
+    <string name="voice_record_start">Record Voice</string>
+    <string name="voice_recording">Recording…</string>
+    <string name="voice_preview">Preview</string>
+    <string name="voice_send">Send Voice</string>
+    <string name="voice_cancel">Cancel</string>
+
+    <!-- SOS -->
+    <string name="sos_title">Emergency SOS</string>
+    <string name="sos_button">Send Emergency SOS</string>
+    <string name="sos_warning_title">Are you sure?</string>
+    <string name="sos_warning_message">This message will be broadcast across all mesh nodes with top priority. Do not send false alerts.</string>
+    <string name="sos_confirm">Yes, Send SOS</string>
+    <string name="sos_cancel">Cancel</string>
+    <string name="sos_alert_prefix">🚨 EMERGENCY SOS:</string>
+
+    <!-- Location -->
+    <string name="location_title">Offline Location Sharing</string>
+    <string name="location_share_once">Share Once</string>
+    <string name="location_share_15min">Share for 15 minutes</string>
+    <string name="location_stop_sharing">Stop Sharing</string>
+    <string name="location_permission_needed">Location permission is required for offline GPS coordinate sharing.</string>
+
+    <!-- File Transfer -->
+    <string name="file_transfer_title">High-Speed File Transfer</string>
+    <string name="transfer_progress_format">%1$d%% complete (%2$s / %3$s)</string>
+    <string name="transfer_resume">Resume</string>
+    <string name="transfer_cancel">Cancel</string>
+
+    <!-- Community Nodes -->
+    <string name="community_nodes_title">Solar-Powered Community Nodes</string>
+    <string name="community_node_desc">Low-cost solar-powered offline mesh repeaters and local gateways.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings &amp; Security</string>
+    <string name="section_account">User Account</string>
+    <string name="section_network">Mesh &amp; Network</string>
+    <string name="section_privacy">Privacy</string>
+    <string name="section_security">Cryptographic Identity</string>
+    <string name="section_app">App Preferences</string>
+    <string name="section_data">Data Management</string>
+
+    <string name="pref_guest_mode">Guest Mode</string>
+    <string name="pref_relay_mode">Relay Mode (Forward others\' packets)</string>
+    <string name="pref_battery_saver">Battery Saver (Smart scanning)</string>
+    <string name="pref_language">Language (ভাষা)</string>
+    <string name="pref_theme">Dark Mode</string>
+    <string name="pref_clear_data">Wipe Local Data</string>
+    <string name="pref_export_data">Export Message History</string>
+    <string name="security_notice">This application operates without centralized servers. Messages are end-to-end encrypted and keys remain strictly in hardware Keystore. Offline mesh is not global Internet.</string>
+</resources>

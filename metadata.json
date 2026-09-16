@@ -1,0 +1,6 @@
+{
+  "name": "Zero-Grid",
+  "description": "Offline-first decentralized communication network connecting devices beyond cellular grids with mesh messaging, SOS, and secure local transfers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

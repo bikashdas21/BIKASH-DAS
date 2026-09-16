@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Dish / Antenna base -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12C2,14.65 3.03,17.06 4.73,18.86L6.15,17.44C4.82,16.05 4,14.12 4,12C4,7.58 7.58,4 12,4C16.42,4 20,7.58 20,12C20,14.12 19.18,16.05 17.85,17.44L19.27,18.86C20.97,17.06 22,14.65 22,12C22,6.48 17.52,2 12,2Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,6C8.69,6 6,8.69 6,12C6,13.66 6.67,15.16 7.76,16.24L9.17,14.83C8.45,14.11 8,13.11 8,12C8,9.79 9.79,8 12,8C14.21,8 16,9.79 16,12C16,13.11 15.55,14.11 14.83,14.83L16.24,16.24C17.33,15.16 18,13.66 18,12C18,8.69 15.31,6 12,6Z" />
+    <!-- Center Node / Beacon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,10C10.9,10 10,10.9 10,12C10,12.74 10.4,13.38 11,13.73V22H13V13.73C13.6,13.38 14,12.74 14,12C14,10.9 13.1,10 12,10Z" />
+</vector>
